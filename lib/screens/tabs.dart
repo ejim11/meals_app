@@ -6,7 +6,6 @@ import 'package:meals_app/screens/filters.dart';
 import 'package:meals_app/screens/meals.dart';
 import 'package:meals_app/widgets/main_drawer.dart';
 import "package:flutter_riverpod/flutter_riverpod.dart";
-import "package:meals_app/providers/meals_provider.dart";
 
 const kInitialFilters = {
   Filter.glutenFree: false,
@@ -34,8 +33,10 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
   }
 
   void _setScreen(String identifier) async {
+    // pop the drawer off the screen
     Navigator.pop(context);
 
+// if identifier == filters, push to the filters screen and when you pop off that screen, return data on the chosen
     if (identifier == 'filters') {
       await Navigator.push<Map<Filter, bool>>(
         context,

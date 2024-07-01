@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:meals_app/model/meal.dart';
 import 'package:meals_app/widgets/meal_item_trait.dart';
 import 'package:transparent_image/transparent_image.dart';
@@ -60,7 +59,7 @@ class MealItem extends StatelessWidget {
                 right: 0,
                 child: Container(
                   padding:
-                      const EdgeInsets.symmetric(vertical: 6, horizontal: 44),
+                      const EdgeInsets.symmetric(vertical: 6, horizontal: 34),
                   color: Colors.black54,
                   child: Column(
                     children: [

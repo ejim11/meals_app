@@ -21,7 +21,6 @@ class _CategoriesScreenState extends State<CategoriesScreen>
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _animationController = AnimationController(
         vsync: this,
@@ -35,7 +34,6 @@ class _CategoriesScreenState extends State<CategoriesScreen>
   @override
   void dispose() {
     _animationController.dispose();
-    // TODO: implement dispose
     super.dispose();
   }
 
@@ -58,6 +56,7 @@ class _CategoriesScreenState extends State<CategoriesScreen>
 
   @override
   Widget build(BuildContext context) {
+    // explicit animation
     return AnimatedBuilder(
         animation: _animationController,
         child: GridView(
